@@ -7,17 +7,6 @@ const { Text } = require('./lib/text.js');
 // questions 
 const questions = [
     {
-        type: "list",
-        name: "shape",
-        message: "Choose a shape for your logo:",
-        choices: ["Circle", "Square", "Triangle"],
-    },
-    {
-        type: "input",
-        name: "shapeColor",
-        message: "Enter the shape color for your logo:",
-    },
-    {
         type: "input",
         name: "text",
         message: "Enter up to 3 characters for your logo text:",
@@ -33,13 +22,24 @@ const questions = [
         name: "textColor",
         message: "Enter the text color for your logo:",
     },
+    {
+        type: "list",
+        name: "shape",
+        message: "Choose a shape for your logo:",
+        choices: ["Circle", "Square", "Triangle"],
+    },
+    {
+        type: "input",
+        name: "shapeColor",
+        message: "Enter the shape color for your logo:",
+    },
 ];
 
 inquirer
   .prompt(questions)
   .then((answers) => {
     console.log('Answers:', answers);
-    
+
 // Create the SVG content based on the selected shape and text
 let svgContent;
 switch (answers.shape) {
@@ -66,7 +66,7 @@ fs.writeFile('logo.svg', svgFileContent, (err) => {
   if (err) {
     console.error(err);
   } else {
-    console.log('SVG file created: logo.svg');
+    console.log('Generated logo.svg');
   }
 });
 })
