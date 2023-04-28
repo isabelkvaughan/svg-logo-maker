@@ -1,6 +1,7 @@
 // import file system & inquirer
 const inquirer = require('inquirer');
 const fs = require('fs');
+const { Circle, Square, Triangle } = require('./shapes');
 
 // questions 
 const questions = [
