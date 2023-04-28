@@ -3,6 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const { Circle, Square, Triangle } = require('./lib/shapes.js');
 const { Text } = require('./lib/text.js');
+const { generateSVG } = require('./lib/svg.js');
 
 // questions 
 const questions = [
@@ -60,16 +61,8 @@ switch (answers.shape) {
 const text = new Text(answers.text, answers.textColor);
 svgContent += text.render();
 
-// Create the SVG file
-const svgFileContent = `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">${svgContent}</svg>`;
-fs.writeFile('logo.svg', svgFileContent, (err) => {
-  if (err) {
-    console.error(err);
-  } else {
-    console.log('Generated logo.svg');
-  }
-});
+generateSVG(svgContent);
 })
 .catch((error) => {
-console.log('Error:', error);
+    console.log('Error:', error);
 });
