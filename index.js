@@ -29,7 +29,7 @@ const questions = [
     {
         type: "input",
         name: "textColor",
-        message: "Enter the shape color for your logo:",
+        message: "Enter the text color for your logo:",
     },
 ];
 
