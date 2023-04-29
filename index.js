@@ -39,7 +39,6 @@ const questions = [
 inquirer
   .prompt(questions)
   .then((answers) => {
-    console.log('Answers:', answers);
 
 // Create the SVG content based on the selected shape and text
 let svgContent;
