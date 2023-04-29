@@ -43,7 +43,7 @@ GitHub Repository: [github.com/isabelkvaughan/svg-logo-maker](https://github.com
 [Example Circle Logo](./examples/circle-logo.svg). 
 [Example Square Logo](./examples/square-logo.svg). 
 [Example Triangle Logo](./examples/triangle-logo.svg). 
-[Video on how to use]().
+[Video on how to use](https://drive.google.com/file/d/1FiwgW4dQ5SX5YFVM7zA99Flhuzm4Y2VI/view?usp=sharing).
 
 ## Contact
 
